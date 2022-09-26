@@ -1,29 +1,33 @@
+/* Debería comprobar en todas las funciones el tipo de dato sque me pasan por parametro y si es un array,
+  comprobar el tipo de datos dentro del Array, no lo he hecho por agilizar. */
+
 // Iteración #1: Buscar el máximo**
 // Completa la función que tomando dos números como argumento devuelva el más alto.
 const sum = (numberOne, numberTwo) => {
-    if (numberOne > numberTwo) console.log(numberOne)
-    else if (numberTwo > numberOne) console.log(numberTwo)
-    else console.log('Both numbers are equal')
+    if (numberOne > numberTwo) return numberOne 
+    else if (numberTwo > numberOne) return numberTwo 
+     return'Both numbers are equal' 
 }
-sum(10, 10)
+const a = sum(10, 10)
+console.log(a)
 
 // Iteración #2: Buscar la palabra más larga**
 // Completa la función que tomando un array de strings como argumento devuelva el más largo, en caso de que dos strings tenga la misma longitud deberá devolver el primero.
 const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain M.'];
 const findLongestWord = (param) => {
-    if (!Array.isArray(param)) console.log('You must set an array as a parameter')
-    else {
-        let wordsLength = []
-        for(word of param) {
-            wordsLength.push(word.length)
-        }
-        const longestWords = param.filter(w => w.length === Math.max(...wordsLength))
-        
-        console.log(longestWords[0])
+    if (!Array.isArray(param)) return 'You must set an array as a parameter'
+    let wordsLength = []
+    for(word of param) {
+        wordsLength.push(word.length)
     }
+    const longestWords = param.filter(w => w.length === Math.max(...wordsLength))
+    
+    return longestWords[0]
+    
   
 }
-findLongestWord('a')
+const b = findLongestWord('a')
+console.log(b)
 
 //Iteración #3: Calcular la suma**
 
@@ -33,7 +37,19 @@ Implemente la función denominada sumNumbers que toma un array de números como 
 const numbers = [1, 2, 3, 5, 45, 37, 58];
 
 const sumAll = param => {
-    if (!Array.isArray(param)) console.log('You must set an array as a parameter')
-    else console.log(param.reduce((prev, curr) => prev + curr, 0))
+    if (!Array.isArray(param)) return 'You must set an array as a parameter'
+    return param.reduce((prev, curr) => prev + curr, 0)
 }
-sumAll(numbers)
+const c = sumAll(numbers)
+console.log(c)
+
+//Iteración #4: Calcular el promedio**
+//Calcular un promedio es una tarea extremadamente común. Puedes usar este array para probar tu función:
+const numberss = [12, 21, 38, 5, 45, 37, 6];
+function average(param) {
+  const addedNumbers = sumAll(numberss)
+  return addedNumbers / numberss.length
+}
+
+const d = average(numberss)
+console.log(d)
