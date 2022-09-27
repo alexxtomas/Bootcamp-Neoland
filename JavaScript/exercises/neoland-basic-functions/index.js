@@ -150,3 +150,39 @@ function finderName(array, nameToFind) {
 
 const j = finderName(nameFinder, 'Tony')
 console.log(j)
+
+
+// Iteration #8: Contador de repeticiones
+
+// Crea una función que nos devuelva el número de veces que se repite cada una de las palabras que lo conforma.  Puedes usar este array para probar tu función:
+
+const counterWords = [
+  'code',
+  'repeat',
+  'eat',
+  'sleep',
+  'code',
+  'enjoy',
+  'sleep',
+  'code',
+  'enjoy',
+  'upgrade',
+  'code'
+];
+function repeatCounter(param) {
+  const uniqueStrings = [...new Set(counterWords)]
+  const repeated =  {}
+  for (let k of uniqueStrings) {
+    repeated[k] = 0
+  }
+  param.forEach(s => {
+    uniqueStrings.forEach(e => {
+      if(e === s) repeated[e] += 1
+    })
+  })
+
+  return repeated
+}
+
+ const k = repeatCounter(counterWords)
+console.log(k)
