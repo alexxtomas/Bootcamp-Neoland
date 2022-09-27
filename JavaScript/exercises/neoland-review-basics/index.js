@@ -94,9 +94,10 @@ const exampleArray = ['Caracol', 'Mosquito', 'Salamandra', 'Ajolote']
 const findArrayIndex = (array, text) => {
     let index = array.findIndex(s => s === text)
     if(index === -1) return new Error(`The array does not have "${text}" text`)
+    return index
 }
 
-console.log(findArrayIndex(exampleArray, 'Caracol'))
+console.log(findArrayIndex(exampleArray, 'Mosquito'))
 
 // Iteración #5: Función rollDice
 const rollDice = (faces) => {
@@ -104,3 +105,16 @@ const rollDice = (faces) => {
 }
 
 console.log(rollDice(10))
+
+// Iteración #6: Función swap
+const exampleArray2 = ['Mesirve', 'Cristiano Romualdo', 'Fernando Muralla', 'Ronalguiño']
+
+const swap = (array, a, b) => {
+    const element = array[a]
+    array[a] = array[b]
+    array[b] = element
+    return array
+    
+}
+
+console.log(swap(exampleArray2, 0, 3))
