@@ -86,3 +86,14 @@ for (let i in allUsersFavoriteSounds) {
 }
 
 console.log(usersFavoriteSoundsCounter)
+
+// Iteración #4: Métodos findArrayIndex
+
+const exampleArray = ['Caracol', 'Mosquito', 'Salamandra', 'Ajolote']
+
+const findArrayIndex = (array, text) => {
+    let index = array.findIndex(s => s === text)
+    if(index === -1) return new Error(`The array does not have "${text}" text`)
+}
+
+console.log(findArrayIndex(exampleArray, 's'))
