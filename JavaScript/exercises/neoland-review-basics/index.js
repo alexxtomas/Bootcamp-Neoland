@@ -96,4 +96,11 @@ const findArrayIndex = (array, text) => {
     if(index === -1) return new Error(`The array does not have "${text}" text`)
 }
 
-console.log(findArrayIndex(exampleArray, 's'))
+console.log(findArrayIndex(exampleArray, 'Caracol'))
+
+// Iteración #5: Función rollDice
+const rollDice = (faces) => {
+    return parseInt(Math.random() * (faces + 1))
+}
+
+console.log(rollDice(10))
