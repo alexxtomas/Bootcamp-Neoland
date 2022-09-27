@@ -62,3 +62,27 @@ for (let user of users) {
 const volumesAverage = allVolumes.reduce((prev,curr) => prev + curr, 0)
                        / allVolumes.length
 console.log(volumesAverage)
+
+
+// Iteración #3: Mix Fors
+
+let allUsersFavoriteSounds = []
+
+for (let user of users) {
+    allUsersFavoriteSounds.push(Object.keys(user.favoritesSounds))
+}
+
+allUsersFavoriteSounds = allUsersFavoriteSounds.flat()
+let usersFavoriteSoundsCounter = {}
+
+for (let sound of allUsersFavoriteSounds) {
+    usersFavoriteSoundsCounter[sound] = 0
+}
+
+for (let i in allUsersFavoriteSounds) {
+    if(allUsersFavoriteSounds[i] in usersFavoriteSoundsCounter) {
+        usersFavoriteSoundsCounter[allUsersFavoriteSounds[i]] += 1
+    }
+}
+
+console.log(usersFavoriteSoundsCounter)
