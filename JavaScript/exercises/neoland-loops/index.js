@@ -37,3 +37,17 @@ const placesToTravel = ['Japon', 'Venecia', 'Murcia', 'Santander', 'Filipinas', 
 for (let place of placesToTravel) {
     console.log(place)
 }
+
+//Iteración #4: Probando For...in
+
+//Usa un for...in para imprimir por consola los datos del alienígena..
+const alien = {
+    name: 'Wormuck',
+    race: 'Cucusumusu',
+    planet: 'Eden',
+    weight: '259kg'
+}
+
+for (let prop in alien) {
+    console.log(alien[prop])
+}
