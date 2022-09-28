@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.delete-last-one,
+.remove-this {
+    border-radius: 5px;
+    padding: 5px;
+    margin: 8px;
+}
+
+.delete-last-one {
+    position: relative;
+    right: -100px;
+}
+
+.delete-last-one:hover,
+.remove-this:hover {
+    cursor: pointer;
+
+}
+
+.list-element {
+    margin-left: 15px;
+}
+
+.remove-this {
+    position: relative;
+    right: -20px;
+    top: -80px;
+}
