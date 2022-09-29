@@ -54,17 +54,10 @@ button.innerHTML = 'Delete Last One'
 button.className = 'delete-last-one'
 document.body.appendChild(button)
 button.addEventListener('click', evt => {
-    // const bodyChildren = Array.from(evt.target.parentElement)
-    // bodyChildren.filter(child => console.log('child'))
-    // console.log(Array.from(evt.target))
     const bodyChildren = Array.from(evt.path[1].childNodes)
-    console.log(bodyChildren)
     const buttonIndex = bodyChildren.indexOf(button)
     if(bodyChildren[buttonIndex - 1] === ul) window.location.reload()
     bodyChildren[buttonIndex - 1].remove()
-    
-   
-    
 })
 
 /* 1.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los 
