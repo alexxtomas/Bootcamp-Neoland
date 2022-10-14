@@ -1,0 +1,1 @@
+Me gustó la idea, así que decidí realizar un proyecto basándose en este ejercicio  -> https://github.com/alexxtomas/Star-Wars-Gallery-With-JavaScript-Vanilla

@@ -1,0 +1,19 @@
+h1 {
+    background-color: aquamarine;
+}
+
+.content {
+    background-color: blue;
+    background-size: 10%;
+}
+
+body {
+    background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+    background-size: contain;
+
+}
+
+p {
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+
+}

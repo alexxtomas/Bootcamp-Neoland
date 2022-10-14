@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    margin: 20px;
+    position: relative;
+    left: 15px
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 20px;
+}
+
+span {
+    padding: 20px;
+    position: relative;
+    font-size: 20px;
+
+}
+
+p {
+    margin: 20px;
+}
+
+.quantity {
+    position: relative;
+
+}
+
+.date,
+.quantity,
+.product {
+    text-decoration: underline;
+    font-weight: 800;
+}

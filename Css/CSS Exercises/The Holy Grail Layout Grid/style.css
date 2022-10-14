@@ -1,0 +1,67 @@
+body,
+html {
+    height: 100vh;
+    width: 100vw;
+
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    height: 100vh;
+    max-width: 1000px;
+    padding: 16px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows:
+        100px 130px 1fr 70px;
+    grid-template-areas:
+        "header header header"
+        "sidebar nav nav"
+        "sidebar artice article"
+        "footer footer footer"
+    ;
+    gap: 15px;
+}
+
+.container div {
+    padding: 15px;
+    font-size: 32px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: white;
+    border-radius: 15px;
+}
+
+.header {
+    background-color: #FFDE22;
+    grid-area: header;
+}
+
+.sidebar {
+    background-color: #FF7755;
+    grid-area: sidebar;
+}
+
+.nav {
+    background-color: #00DDFF;
+    grid-area: nav;
+}
+
+.article {
+    background-color: #bccbde;
+    grid-area: artice;
+}
+
+.article p {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: white;
+    text-align: left;
+}
+
+.footer {
+    background-color: #393f4d;
+    grid-area: footer;
+}
